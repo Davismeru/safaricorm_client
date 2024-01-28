@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blue_gradient {
+  @apply bg-gradient-62 bg-[#8EC5FC] from-[#8EC5FC_0%] to-[#E0C3FC_100%];
+}
