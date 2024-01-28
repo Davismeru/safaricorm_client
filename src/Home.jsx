@@ -7,6 +7,7 @@ function Home() {
   const [safNo, setSafNo] = useState(0);
   const [error, setError] = useState("");
   const [proceed, setProceed] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
   const params = useParams();
@@ -17,9 +18,11 @@ function Home() {
   };
 
   const handleConfirm = async () => {
+    setLoading(true);
     const res = await axios.post(`${base_api_url}/register/confirm`, {
       number: safNo,
     });
+    setLoading(false);
 
     if (res.data.error) {
       setError(res.data.error);
@@ -30,10 +33,12 @@ function Home() {
   };
 
   const handleSubmit = async () => {
+    setLoading(true);
     const res = await axios.post(`${base_api_url}/register`, {
       number: safNo,
       referer_code: referer_code,
     });
+    setLoading(false);
 
     localStorage.setItem("mycode", res.data);
     navigate("/share/final");
@@ -65,7 +70,7 @@ function Home() {
             className="bg-green-400 p-3 text-white"
             onClick={handleConfirm}
           >
-            Confirm
+            {loading ? "Just a sec..." : "Confirm"}
           </button>
         </section>
 
@@ -89,7 +94,7 @@ function Home() {
               className="font-semibold mt-2 w-full bg-green-500 text-white p-2 rounded-md"
               onClick={handleSubmit}
             >
-              RECIEVE FREE 5GB DATA
+              {loading ? "just a sec..." : "RECIEVE FREE 5GB DATA"}
             </button>
           </section>
         )}
