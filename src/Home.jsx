@@ -47,7 +47,7 @@ function Home() {
   };
 
   return (
-    <div className="bg-gradient-160 blue_gradient p-5 flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-gradient-160 blue_gradient p-5 flex flex-col items-center justify-center">
       <section className="w-full h-[90%] bg-white rounded-lg text-xl p-3">
         {/* <p> Good news everybody!! Safaricon has patnered with Cloudflare Internet Services (United Kingdom) to Unleash the power of connectivity and to celebrate this milestone, they are gifting all their esteemed customers with 5GB free data bundles </p> */}
         <p className="my-10">
@@ -60,15 +60,15 @@ function Home() {
           <br />
         </p>
 
-        <section className="border w-full mt-2 border-green-600 flex justify-between rounded-md overflow-hidden">
+        <section className="border mt-2 border-green-600 flex justify-between rounded-md">
           <input
             type="text"
             placeholder="07 XX XXX XXX"
-            className="p-3 outline-none"
+            className="p-3 outline-none w-[60%]"
             onChange={handleChange}
           />
           <button
-            className="bg-green-400 p-3 text-white basis-1/3"
+            className="bg-green-400 p-3 text-white"
             onClick={handleConfirm}
           >
             {loading ? "Just a sec..." : "Confirm"}
@@ -103,7 +103,7 @@ function Home() {
         {/* adsterra ad */}
         <BannerAd />
       </section>
-      <p className="absolute bottom-0 text-gray-500 text-sm">
+      <p className="text-gray-500 text-sm">
         <Link to="/read/disclaimer">Disclaimer</Link>
       </p>
     </div>
