@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { base_api_url } from "./assets/constants";
+import BannerAd from "./BannerAd";
 
 function Home() {
   const [safNo, setSafNo] = useState(0);
@@ -98,6 +99,9 @@ function Home() {
             </button>
           </section>
         )}
+
+        {/* adsterra ad */}
+        <BannerAd />
       </section>
       <p className="absolute bottom-0 text-gray-500 text-sm">
         <Link to="/read/disclaimer">Disclaimer</Link>

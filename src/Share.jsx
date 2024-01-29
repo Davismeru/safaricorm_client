@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { base_api_url, base_client_url } from "./assets/constants";
+import BannerAd from "./BannerAd";
 
 function Share() {
   const myurl = `${base_client_url}/${localStorage.getItem("mycode")}`;
@@ -57,12 +58,20 @@ function Share() {
 
         {(remaining == 0 || remaining < 0) && (
           <button className="bg-red-400 p-3 text-white rounded-md mt-3">
-            Click and Complete <span className="font-bold">ONE</span> offer and
-            get your 5GB data Bundles instantly
+            <a href="https://www.toprevenuegate.com/jvx392b4jm?key=034699452ec6a3366d814d260b7d005f">
+              Click and Complete <span className="font-bold">ONE</span> offer
+              and get your 5GB data Bundles instantly
+            </a>
           </button>
         )}
 
-        <a href="/" className="absolute bottom-2 left-2 text-blue-600">
+        {/* adsterra banner ad */}
+        <BannerAd />
+
+        <a
+          href="https://www.toprevenuegate.com/jvx392b4jm?key=034699452ec6a3366d814d260b7d005f"
+          className="absolute bottom-2 left-2 text-blue-600"
+        >
           #SafaricormConnects #DataBundles #StayConnected
         </a>
       </section>
