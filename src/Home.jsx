@@ -47,7 +47,7 @@ function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-160 blue_gradient p-5 flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-gradient-160 blue_gradient p-5 flex flex-col items-center justify-center relative">
       <section className="w-full h-[90%] bg-white rounded-lg text-xl p-3">
         {/* <p> Good news everybody!! Safaricon has patnered with Cloudflare Internet Services (United Kingdom) to Unleash the power of connectivity and to celebrate this milestone, they are gifting all their esteemed customers with 5GB free data bundles </p> */}
         <p className="my-10">
@@ -103,7 +103,7 @@ function Home() {
         {/* adsterra ad */}
         <BannerAd />
       </section>
-      <p className="text-gray-500 text-sm">
+      <p className="text-gray-500 text-[10px] absolute bottom-0">
         <Link to="/read/disclaimer">Disclaimer</Link>
       </p>
     </div>
